@@ -1,0 +1,14 @@
+Changelog for Dist-Zilla-PluginBundle-Author-IOANR
+
+0.001 2014-01-21T00:38:55
+ [Ioan Rogers <ioanr@cpan.org>]
+ - Disabled some erroneously failing tests
+ - Don't need semantic versioning for this module
+ - Only warn for untracked files
+ - Allow custom builder and configurable tag regexps
+ - multiple_inheritance option needed because otherwise DZP::ChangeLog from
+   git can't properly traverse releases
+ - * Moved prereqs to dist.ini * Added option to disable specified plugins
+   * Added option to use Devel::AssertOS
+ - Initial commit
+

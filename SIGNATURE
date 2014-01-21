@@ -1,0 +1,58 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.73.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+SHA1 cab89cec37ba9c8cda4d75af2d6001774e96cc7b Build.PL
+SHA1 5e76b891e62256232b4e0a7b5ee905e43b342f43 Changes
+SHA1 36c0ac57d646014eb215e19fcc4e4ba2905c360b LICENSE
+SHA1 0633da22aaacf830b68774e8f51d0912029f6d0e MANIFEST
+SHA1 3adbd36c68456f546874dc12c95763139d5318b5 META.json
+SHA1 13155381fc6a0d9bf477c5a9680293dc3835fb62 README.mkdn
+SHA1 948589730ec57d26a0378c9c13c4e91350d86866 dist.ini
+SHA1 5d1936a7270f73876569549fb4990968f182b612 lib/Dist/Zilla/PluginBundle/Author/IOANR.pm
+SHA1 cbb3fe66db9c4695fac92d5406ae81ff15db9a5a lib/Pod/Weaver/PluginBundle/Author/IOANR.pm
+SHA1 beb7e9629d233b2de40b4fabe29e21be0814a868 perlcriticrc
+SHA1 b81f6f178a431aaaaf63055d228582863ce70333 perltidyrc
+SHA1 985d9ded8d8ed7e344a09e52b1402e878e91da28 t/00-check-deps.t
+SHA1 521ffff4edbfbdab422551c818cca5d95a2a2baf t/00-compile.t
+SHA1 731654efbfede7b379faf77be1013c7150feaacf t/00-report-prereqs.t
+SHA1 fc4b22f65021dc6dde9ffe4c3473b21c26fc4a26 tidyall.ini
+SHA1 c56cb3bc847e512dcec236c309f4e0b6455c3dc0 xt/author/test-eol.t
+SHA1 199b3d456352d36185a3f28aaf40efb0475dacab xt/release/cpan-changes.t
+SHA1 7b52b909acf6cd52733f8f226f92147ed76a2717 xt/release/meta-json.t
+SHA1 bae663945a4380ca95a6ba5d8f5e42d2946e0629 xt/release/minimum-version.t
+SHA1 c6c3c9f7fe12058b4771449dff874b1c450c982c xt/release/mojibake.t
+SHA1 77cfa6a37d5336a7b0199d24c4d4fccdfa7021eb xt/release/no-tabs.t
+SHA1 0f2af233072d355a3999384983e05d60c951a601 xt/release/pod-syntax.t
+SHA1 29865e58a16b5465bb7efbd399ad16ba72f50695 xt/release/portability.t
+SHA1 bbcd59d081d9940af5d43337ae85458075933829 xt/release/test-version.t
+SHA1 ec3f84bfd7a9ce3246e7592f4134100c6b5ce02b xt/release/unused-vars.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIcBAEBCgAGBQJS3cGnAAoJELCDA8+ONCk7P6AQAKqP8755hqQERJjZ8t1cDDdI
+TxvVXhWRhksDg3awyjh6wP/M2TCO1IFXkDIMKPc75699leqeDXIL/Pv7fcZws644
+dmFYFUokYYoOLtlKDge7hfGtiwcCPshh8UYQEnpDd0i9BZ7RL46KjtPskbK0Pgxv
+EMpHAuW8tJeJo/idF54wzcwmvGBNtHXJa3fUBuXR7gLgngCbnasosYXVG/iL+4wi
+6s+YCsG0td6IJ1JHDXgwC/L3Gfz1uqP4/Z0OOwuH5YGKAYuGZ8khfV6i4V3o5l27
+BfVrqxc+Fs7AxjZIfpKtgklt3sR30P232pL0SPz4s++qSyKXvuVKZ13r2rwjB20E
+QMEfXctQsYlCFMWBXGbiDTOuXi8cK4Hbx4FKKCY4L7eBM1MCjQZmAA53EeTYUgk4
+bXODmVOAsmmD+WzgtkeE+r0KJ9/bcgxNipqwhWsyqWdtm0BOd9xZcCfAxkiJS+JE
+nAH9dvM3CiZ1EhdO6KOhGjB3/vbvhEa9SH5BxyBRPCYEILvatp56a0qqK2WzG5L1
+KFVApLkwDERwO+jczaTeJGADCnpOFmRlBHIyhom5uqojz/ewLuiKO3Q5f0AVR+Ao
+D3oy7Tgjn6mvLg4XF4C/GZFcUwuF9WyMK4oCv6NFC9E6T7LsySOrsO+RbChpZwFr
+FcKzKjpI+rQX1QCwVwdU
+=/7uR
+-----END PGP SIGNATURE-----
