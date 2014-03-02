@@ -1,5 +1,5 @@
 package Dist::Zilla::PluginBundle::Author::IOANR;
-$Dist::Zilla::PluginBundle::Author::IOANR::VERSION = '0.001';
+$Dist::Zilla::PluginBundle::Author::IOANR::VERSION = '0.002';
 # ABSTRACT: Build dists the way IOANR likes
 use v5.12;
 use Moose;
@@ -7,7 +7,6 @@ use Moose;
 with 'Dist::Zilla::Role::PluginBundle::Easy';
 
 # TODO optionally add OSPreqs
-# TODO alternate tag_regexp for CPAN::Changes
 
 sub mvp_multivalue_args {qw/disable assert_os/}
 
@@ -16,19 +15,20 @@ sub configure {
     my $arg = $self->payload;
 
     my $change_opts = {
-        file_name       => 'Changes',
-        tag_regexp      => '^v(\d+\.\d+\.\d+)$',
-        max_age         => '730',
         exclude_message => '^(dist.ini|v(\d+\.?)+)',
-        group_by_author => 1,
+        edit_changelog  => 1,
     };
 
-    if (exists $arg->{semantic_version} && !$arg->{semantic_version}) {
-        $change_opts->{tag_regexp} = '^v(\d+\.\d+)$',;
+    if (exists $arg->{semantic_version} && $arg->{semantic_version}) {
+        $change_opts->{tag_regexp} = '^v?(\d+\.\d+\.\d+)$';
     }
 
-    $self->add_plugins(
-        ['Git::GatherDir' => {include_dotfiles => 1}],
+    $self->add_plugins([
+            'Git::GatherDir' => {
+                include_dotfiles => 1,
+                exclude_match    => '(Changes|README.mkdn)$'
+            },
+        ],
         [
             'Git::Check' => {
                 allow_dirty     => [qw/README.mkdn dist.ini Changes/],
@@ -44,9 +44,7 @@ sub configure {
                 location => 'build',
             }
         ],
-        [
-            'ChangelogFromGit::CPAN::Changes' =>
-        ],
+        ['ChangelogFromGit::CPAN::Changes' => $change_opts],
         qw/
           ContributorsFile
           ContributorsFromGit
@@ -62,16 +60,20 @@ sub configure {
           ShareDir
           Signature
           Test::CheckDeps
-          Test::Pod::No404s
           Test::ReportPrereqs
           TestRelease
           /,
     );
 
+    # Test::Pod::No404s - links are being truncated?
     $self->add_bundle(GitHub => {metacpan => 1});
 
-    $self->add_bundle(TestingMania =>
-          {disable => [qw/MetaTests Test::Kwalitee Test::Perl::Critic/]});
+    # problem with DistManifest and Module::Build::Tiny - _build_params
+    $self->add_bundle(
+        TestingMania => {
+            disable => [
+                qw/MetaTests Test::Kwalitee Test::Perl::Critic Test::DistManifest/
+            ]});
 
     if (!$arg->{fake_release}) {
         $self->add_plugins([
@@ -81,10 +83,15 @@ sub configure {
                     multiple_inheritance => 1,
                 }
             ],
+            [
+                'Git::Commit' => {
+                    allow_dirty => [qw/README.mkdn dist.ini Changes/],
+                    ,
+                }
+            ],
             ['Git::Tag' => {signed => 1, branch => 'last_release'}],
             qw/
               ConfirmRelease
-              Git::Commit
               Git::Push
               UploadToCPAN
               /
@@ -129,7 +136,7 @@ __END__
 
 =encoding UTF-8
 
-=for :stopwords Ioan Rogers
+=for :stopwords Ioan Rogers <ioan@dirtysoft.ca> Sergey Romanov <sromanov-dev@yandex.ru>
 
 =head1 NAME
 
@@ -137,7 +144,7 @@ Dist::Zilla::PluginBundle::Author::IOANR - Build dists the way IOANR likes
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 DESCRIPTION
 
@@ -247,6 +254,8 @@ You can make new bug reports, and view existing ones, through the
 web interface at L<https://github.com/ioanrogers/Dist-Zilla-PluginBundle-Author-IOANR/issues>.
 
 =head1 AVAILABILITY
+
+The project homepage is L<http://metacpan.org/release/Dist-Zilla-PluginBundle-Author-IOANR/>.
 
 The latest version of this module is available from the Comprehensive Perl
 Archive Network (CPAN). Visit L<http://www.perl.com/CPAN/> to find a CPAN

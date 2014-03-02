@@ -1,5 +1,5 @@
 package Pod::Weaver::PluginBundle::Author::IOANR;
-$Pod::Weaver::PluginBundle::Author::IOANR::VERSION = '0.001';
+$Pod::Weaver::PluginBundle::Author::IOANR::VERSION = '0.002';
 # ABSTRACT: Weave the POD for a IOANR dist
 
 use Moose;
@@ -11,7 +11,7 @@ sub mvp_bundle_config {
     my @plugins;
     push @plugins, (
         ['@Author::IOANR/CorePrep', _exp('@CorePrep'), {}],
-        ['@Author::IOANR/Encoding', _exp('-Encoding'), {}],
+        ['@Author::IOANR/SingleEncoding', _exp('-SingleEncoding'), {}],
         [
             '@Author::IOANR/EnsureUniqueSections',
             _exp('-EnsureUniqueSections'),
@@ -73,7 +73,7 @@ __END__
 
 =encoding UTF-8
 
-=for :stopwords Ioan Rogers
+=for :stopwords Ioan Rogers <ioan@dirtysoft.ca> Sergey Romanov <sromanov-dev@yandex.ru>
 
 =head1 NAME
 
@@ -81,7 +81,7 @@ Pod::Weaver::PluginBundle::Author::IOANR - Weave the POD for a IOANR dist
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 SEE ALSO
 
@@ -94,6 +94,8 @@ You can make new bug reports, and view existing ones, through the
 web interface at L<https://github.com/ioanrogers/Dist-Zilla-PluginBundle-Author-IOANR/issues>.
 
 =head1 AVAILABILITY
+
+The project homepage is L<http://metacpan.org/release/Dist-Zilla-PluginBundle-Author-IOANR/>.
 
 The latest version of this module is available from the Comprehensive Perl
 Archive Network (CPAN). Visit L<http://www.perl.com/CPAN/> to find a CPAN

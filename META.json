@@ -4,7 +4,7 @@
       "Ioan Rogers <ioanr@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.012, CPAN::Meta::Converter version 2.133380",
+   "generated_by" : "Dist::Zilla version 5.013, CPAN::Meta::Converter version 2.133380",
    "license" : [
       "artistic_2"
    ],
@@ -16,7 +16,7 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "Module::Build::Tiny" : "0.032"
+            "Module::Build::Tiny" : "0.035"
          }
       },
       "develop" : {
@@ -41,7 +41,7 @@
             "Dist::Zilla::Plugin::Meta::Contributors" : "0",
             "Dist::Zilla::Plugin::MetaData::BuiltWith" : "0",
             "Dist::Zilla::Plugin::ModuleBuildTiny" : "0",
-            "Dist::Zilla::Plugin::PodWeaver" : "0",
+            "Dist::Zilla::Plugin::PodWeaver" : "4.000",
             "Dist::Zilla::Plugin::ReadmeAnyFromPod" : "0",
             "Dist::Zilla::Plugin::RunExtraTests" : "0",
             "Dist::Zilla::Plugin::Signature" : "0",
@@ -52,7 +52,6 @@
             "Dist::Zilla::PluginBundle::TestingMania" : "0",
             "Perl::Tidy" : "0",
             "Pod::Elemental::Transformer::List" : "0",
-            "Pod::Weaver::Plugin::Encoding" : "0",
             "Pod::Weaver::Plugin::EnsureUniqueSections" : "0",
             "Pod::Weaver::Plugin::StopWords" : "0",
             "Pod::Weaver::Section::Availability" : "0",
@@ -66,7 +65,7 @@
       "test" : {
          "recommends" : {
             "CPAN::Meta" : "0",
-            "CPAN::Meta::Requirements" : "0"
+            "CPAN::Meta::Requirements" : "2.120900"
          },
          "requires" : {
             "File::Spec" : "0",
@@ -82,13 +81,14 @@
       "bugtracker" : {
          "web" : "https://github.com/ioanrogers/Dist-Zilla-PluginBundle-Author-IOANR/issues"
       },
+      "homepage" : "http://metacpan.org/release/Dist-Zilla-PluginBundle-Author-IOANR/",
       "repository" : {
          "type" : "git",
          "url" : "git://github.com/ioanrogers/Dist-Zilla-PluginBundle-Author-IOANR.git",
          "web" : "https://github.com/ioanrogers/Dist-Zilla-PluginBundle-Author-IOANR"
       }
    },
-   "version" : "0.001",
+   "version" : "0.002",
    "x_BuiltWith" : {
       "modules" : {
          "CPAN::Meta" : "2.133380",
@@ -96,29 +96,28 @@
          "Code::TidyAll" : "0.18",
          "Code::TidyAll::Plugin::Perl::AlignMooseAttributes" : "0.01",
          "Dist::Zilla::Plugin::AssertOS" : "0.06",
-         "Dist::Zilla::Plugin::ChangelogFromGit::CPAN::Changes" : "0.0.6",
+         "Dist::Zilla::Plugin::ChangelogFromGit::CPAN::Changes" : "0.0.10",
          "Dist::Zilla::Plugin::ContributorsFile" : "0.2.0",
          "Dist::Zilla::Plugin::ContributorsFromGit" : "0.006",
-         "Dist::Zilla::Plugin::Git" : "2.019",
+         "Dist::Zilla::Plugin::Git" : "2.020",
          "Dist::Zilla::Plugin::Meta::Contributors" : "0.001",
          "Dist::Zilla::Plugin::MetaData::BuiltWith" : "0.04000002",
          "Dist::Zilla::Plugin::ModuleBuildTiny" : "0.006",
          "Dist::Zilla::Plugin::PodWeaver" : "4.005",
          "Dist::Zilla::Plugin::ReadmeAnyFromPod" : "0.133360",
-         "Dist::Zilla::Plugin::RunExtraTests" : "0.016",
+         "Dist::Zilla::Plugin::RunExtraTests" : "0.018",
          "Dist::Zilla::Plugin::Signature" : "1.100930",
          "Dist::Zilla::Plugin::Test::CheckDeps" : "0.012",
          "Dist::Zilla::Plugin::Test::Pod::No404s" : "1.001",
-         "Dist::Zilla::Plugin::Test::ReportPrereqs" : "0.012",
+         "Dist::Zilla::Plugin::Test::ReportPrereqs" : "0.013",
          "Dist::Zilla::PluginBundle::GitHub" : "0.36",
          "Dist::Zilla::PluginBundle::TestingMania" : "0.21",
          "File::Spec" : "3.40",
          "IO::Handle" : "1.34",
          "IPC::Open3" : "1.13",
-         "Module::Build::Tiny" : "0.032",
+         "Module::Build::Tiny" : "0.035",
          "Perl::Tidy" : "20130922",
          "Pod::Elemental::Transformer::List" : "0.102000",
-         "Pod::Weaver::Plugin::Encoding" : "0.02",
          "Pod::Weaver::Plugin::EnsureUniqueSections" : "0.121550",
          "Pod::Weaver::Plugin::StopWords" : "1.008",
          "Pod::Weaver::Section::Availability" : "1.20",
@@ -148,6 +147,10 @@
          "osname" : "linux"
       },
       "platform" : "linux"
-   }
+   },
+   "x_contributors" : [
+      "Ioan Rogers <ioan@dirtysoft.ca>",
+      "Sergey Romanov <sromanov-dev@yandex.ru>"
+   ]
 }
 
