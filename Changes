@@ -1,5 +1,13 @@
 Changelog for Dist-Zilla-PluginBundle-Author-IOANR
 
+0.003 2014-03-02T09:12:59Z
+ - Don't auto-commit non-release builds in Git::CommitBuild (Ioan Rogers)
+ - Copy readme to root (Ioan Rogers)
+ - Use the new tag_regexp option for changelog (Ioan Rogers)
+ - Update minimum version requirements (Ioan Rogers)
+ - Add a readme (Ioan Rogers)
+ - Add a changelog (Ioan Rogers)
+
 0.002 2014-03-02T07:37:13Z
  - Make sure generated files are committed (Ioan Rogers)
  - Disable some problematic tests (Ioan Rogers)

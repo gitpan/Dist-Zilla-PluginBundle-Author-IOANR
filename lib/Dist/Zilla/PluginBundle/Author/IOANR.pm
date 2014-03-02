@@ -1,5 +1,5 @@
 package Dist::Zilla::PluginBundle::Author::IOANR;
-$Dist::Zilla::PluginBundle::Author::IOANR::VERSION = '0.002';
+$Dist::Zilla::PluginBundle::Author::IOANR::VERSION = '0.003';
 # ABSTRACT: Build dists the way IOANR likes
 use v5.12;
 use Moose;
@@ -20,7 +20,7 @@ sub configure {
     };
 
     if (exists $arg->{semantic_version} && $arg->{semantic_version}) {
-        $change_opts->{tag_regexp} = '^v?(\d+\.\d+\.\d+)$';
+        $change_opts->{tag_regexp} = 'semantic';
     }
 
     $self->add_plugins([
@@ -41,7 +41,7 @@ sub configure {
             ReadmeAnyFromPod => {
                 type     => 'markdown',
                 filename => 'README.mkdn',
-                location => 'build',
+                location => 'root',
             }
         ],
         ['ChangelogFromGit::CPAN::Changes' => $change_opts],
@@ -78,6 +78,7 @@ sub configure {
     if (!$arg->{fake_release}) {
         $self->add_plugins([
                 'Git::CommitBuild' => {
+                    branch               => '',
                     release_branch       => 'last_release',
                     release_message      => 'Release %v',
                     multiple_inheritance => 1,
@@ -86,7 +87,6 @@ sub configure {
             [
                 'Git::Commit' => {
                     allow_dirty => [qw/README.mkdn dist.ini Changes/],
-                    ,
                 }
             ],
             ['Git::Tag' => {signed => 1, branch => 'last_release'}],
@@ -144,7 +144,7 @@ Dist::Zilla::PluginBundle::Author::IOANR - Build dists the way IOANR likes
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 DESCRIPTION
 

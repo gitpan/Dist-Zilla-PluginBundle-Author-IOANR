@@ -5,7 +5,6 @@ Changes
 LICENSE
 MANIFEST
 META.json
-README.mkdn
 SIGNATURE
 dist.ini
 lib/Dist/Zilla/PluginBundle/Author/IOANR.pm

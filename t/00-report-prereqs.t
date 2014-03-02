@@ -63,7 +63,7 @@ my $static_prereqs = do { my $x = {
                       'requires' => {
                                       'Code::TidyAll' => '0',
                                       'Code::TidyAll::Plugin::Perl::AlignMooseAttributes' => '0',
-                                      'Dist::Zilla::Plugin::ChangelogFromGit::CPAN::Changes' => '0',
+                                      'Dist::Zilla::Plugin::ChangelogFromGit::CPAN::Changes' => 'v0.0.12',
                                       'Dist::Zilla::Plugin::ContributorsFile' => '0',
                                       'Dist::Zilla::Plugin::ContributorsFromGit' => '0',
                                       'Dist::Zilla::Plugin::Git' => '0',
@@ -78,7 +78,7 @@ my $static_prereqs = do { my $x = {
                                       'Dist::Zilla::Plugin::Test::Pod::No404s' => '0',
                                       'Dist::Zilla::Plugin::Test::ReportPrereqs' => '0',
                                       'Dist::Zilla::PluginBundle::GitHub' => '0',
-                                      'Dist::Zilla::PluginBundle::TestingMania' => '0',
+                                      'Dist::Zilla::PluginBundle::TestingMania' => '0.21',
                                       'Perl::Tidy' => '0',
                                       'Pod::Elemental::Transformer::List' => '0',
                                       'Pod::Weaver::Plugin::EnsureUniqueSections' => '0',
