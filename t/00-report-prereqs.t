@@ -63,7 +63,7 @@ my $static_prereqs = do { my $x = {
                       'requires' => {
                                       'Code::TidyAll' => '0',
                                       'Code::TidyAll::Plugin::Perl::AlignMooseAttributes' => '0',
-                                      'Dist::Zilla::Plugin::ChangelogFromGit::CPAN::Changes' => 'v0.0.12',
+                                      'Dist::Zilla::Plugin::ChangelogFromGit::CPAN::Changes' => 'v0.0.11',
                                       'Dist::Zilla::Plugin::ContributorsFile' => '0',
                                       'Dist::Zilla::Plugin::ContributorsFromGit' => '0',
                                       'Dist::Zilla::Plugin::Git' => '0',
@@ -79,8 +79,11 @@ my $static_prereqs = do { my $x = {
                                       'Dist::Zilla::Plugin::Test::ReportPrereqs' => '0',
                                       'Dist::Zilla::PluginBundle::GitHub' => '0',
                                       'Dist::Zilla::PluginBundle::TestingMania' => '0.21',
+                                      'Dist::Zilla::Role::PluginBundle::Easy' => '0',
+                                      'Moose' => '0',
                                       'Perl::Tidy' => '0',
                                       'Pod::Elemental::Transformer::List' => '0',
+                                      'Pod::Weaver::Config::Assembler' => '0',
                                       'Pod::Weaver::Plugin::EnsureUniqueSections' => '0',
                                       'Pod::Weaver::Plugin::StopWords' => '0',
                                       'Pod::Weaver::Section::Availability' => '0',
@@ -88,7 +91,8 @@ my $static_prereqs = do { my $x = {
                                       'Pod::Weaver::Section::Contributors' => '0',
                                       'Pod::Weaver::Section::SourceGitHub' => '0',
                                       'Pod::Weaver::Section::WarrantyDisclaimer' => '0',
-                                      'Test::CPAN::Meta::JSON' => '0'
+                                      'Test::CPAN::Meta::JSON' => '0',
+                                      'perl' => 'v5.12.0'
                                     }
                     },
        'test' => {
@@ -97,11 +101,17 @@ my $static_prereqs = do { my $x = {
                                      'CPAN::Meta::Requirements' => '2.120900'
                                    },
                    'requires' => {
+                                   'ExtUtils::MakeMaker' => '0',
                                    'File::Spec' => '0',
+                                   'File::Spec::Functions' => '0',
                                    'IO::Handle' => '0',
                                    'IPC::Open3' => '0',
+                                   'List::Util' => '0',
                                    'Test::CheckDeps' => '0.010',
-                                   'Test::More' => '0.94'
+                                   'Test::More' => '0.94',
+                                   'strict' => '0',
+                                   'version' => '0',
+                                   'warnings' => '0'
                                  }
                  }
      };

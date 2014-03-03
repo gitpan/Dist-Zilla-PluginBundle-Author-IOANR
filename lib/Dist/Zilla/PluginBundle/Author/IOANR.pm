@@ -1,5 +1,5 @@
 package Dist::Zilla::PluginBundle::Author::IOANR;
-$Dist::Zilla::PluginBundle::Author::IOANR::VERSION = '0.003';
+$Dist::Zilla::PluginBundle::Author::IOANR::VERSION = '0.004';
 # ABSTRACT: Build dists the way IOANR likes
 use v5.12;
 use Moose;
@@ -46,6 +46,7 @@ sub configure {
         ],
         ['ChangelogFromGit::CPAN::Changes' => $change_opts],
         qw/
+          AutoPrereqs
           ContributorsFile
           ContributorsFromGit
           ExecDir
@@ -144,7 +145,7 @@ Dist::Zilla::PluginBundle::Author::IOANR - Build dists the way IOANR likes
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 DESCRIPTION
 

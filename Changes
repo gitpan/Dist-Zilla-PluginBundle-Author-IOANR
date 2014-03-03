@@ -1,5 +1,9 @@
 Changelog for Dist-Zilla-PluginBundle-Author-IOANR
 
+0.004 2014-03-03T12:18:58Z
+ - AutoPrereqs had gone missing (Ioan Rogers)
+ - Don't require unreleased versions (Ioan Rogers)
+
 0.003 2014-03-02T09:12:59Z
  - Don't auto-commit non-release builds in Git::CommitBuild (Ioan Rogers)
  - Copy readme to root (Ioan Rogers)

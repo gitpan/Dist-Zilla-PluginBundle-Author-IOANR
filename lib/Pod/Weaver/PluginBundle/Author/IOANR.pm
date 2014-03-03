@@ -1,5 +1,5 @@
 package Pod::Weaver::PluginBundle::Author::IOANR;
-$Pod::Weaver::PluginBundle::Author::IOANR::VERSION = '0.003';
+$Pod::Weaver::PluginBundle::Author::IOANR::VERSION = '0.004';
 # ABSTRACT: Weave the POD for a IOANR dist
 
 use Moose;
@@ -81,7 +81,7 @@ Pod::Weaver::PluginBundle::Author::IOANR - Weave the POD for a IOANR dist
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 SEE ALSO
 
